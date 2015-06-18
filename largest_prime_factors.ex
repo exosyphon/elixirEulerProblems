@@ -8,7 +8,7 @@ defmodule LargestPrimeFactors do
       prime?(number) ->
         [number | factors]
       rem(number, div) == 0 ->
-        prime_factors(div(number, div), 2, [div | factors])
+        prime_factors(div(number, div), 2, factors)
       true ->
         prime_factors(number, div + 1, factors)
     end
